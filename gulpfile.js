@@ -47,7 +47,7 @@ gulp.task('connect', function() {
 
 // Watch
 gulp.task('watch', function() {
-    gulp.watch('src/styles/**/*.css', ['styles']);
+    gulp.watch('src/styles/**/*.scss', ['styles']);
     gulp.watch('src/images/**/*', ['images']);
     gulp.watch('src/**/*.html', ['templates']);
 });
@@ -60,5 +60,5 @@ gulp.task('default', function() {
 // Deploy to gh-pages
 gulp.task('deploy', function() {
   gulp.src("./dist/**/*")
-    .pipe(deploy('<enter your repo git url here>', 'origin'));
+    .pipe(deploy('git@github.com:JParker85/Etsy.git', 'origin'));
 });
